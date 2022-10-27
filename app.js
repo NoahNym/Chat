@@ -24,7 +24,8 @@ onChildAdded(chatRef, function (data){
     console.log(data.val())
     
         const message = document.createElement("li")
-        message.innerText = new Date(data.key).toLocaleDateString("fi-Fi") + ": " + data.val();
+            message.innerText = 
+        new Date(data.key).toLocaleDateString("fi-Fi") + ": " + data.val();
 
         list.appendChild(message)
 })
@@ -36,11 +37,12 @@ const list = document.querySelector("ul")
 input.addEventListener("keypress", function(event){
     if (event.key == "Enter"){
 
-        const messageId = new Date();
+        const messageId = new Date().toUTCString();
 
        set(ref(db, "chat/" + messageId),input.value);
        
        if (input.value != ""){
+        
         const audio = new Audio();
         audio.src = "./Ljud.mp3"
         audio.play();
