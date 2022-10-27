@@ -24,7 +24,7 @@ onChildAdded(chatRef, function (data){
     console.log(data.val())
     
         const message = document.createElement("li")
-        message.innerText = data.val();
+        message.innerText = new Date(data.key).toLocaleDateString("fi-Fi") + ": " + data.val();
 
         list.appendChild(message)
 })
@@ -36,7 +36,7 @@ const list = document.querySelector("ul")
 input.addEventListener("keypress", function(event){
     if (event.key == "Enter"){
 
-        const messageId = Date.now();
+        const messageId = new Date();
 
        set(ref(db, "chat/" + messageId),input.value);
        
