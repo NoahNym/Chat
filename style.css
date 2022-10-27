@@ -86,5 +86,5 @@ input::placeholder {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #ff8d8d; 
+    background: #580000; 
   }
