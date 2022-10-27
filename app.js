@@ -41,7 +41,10 @@ input.addEventListener("keypress", function(event){
        set(ref(db, "chat/" + messageId),input.value);
 
     input.value = ""
-        
+
+    const audio = new Audio();
+    audio.src = "./Ljud.mp3"
+    audio.play();
         
     }
 });
