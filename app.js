@@ -25,7 +25,7 @@ onChildAdded(chatRef, function (data){
     
         const message = document.createElement("li")
             message.innerText = 
-        new Date(data.key).toLocaleDateString("fi-Fi") + ": " + data.val();
+         data.val();
 
         list.appendChild(message)
 })
