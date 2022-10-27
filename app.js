@@ -39,15 +39,15 @@ input.addEventListener("keypress", function(event){
         const messageId = Date.now();
 
        set(ref(db, "chat/" + messageId),input.value);
-
-    input.value = ""
-
-  
-        
     }
     if (input.value != ""){
         const audio = new Audio();
         audio.src = "./Ljud.mp3"
         audio.play();
     }
+    input.value = ""
+
+  
+        
+
 });
