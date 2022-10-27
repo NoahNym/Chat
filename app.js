@@ -42,9 +42,12 @@ input.addEventListener("keypress", function(event){
 
     input.value = ""
 
-    const audio = new Audio();
-    audio.src = "./Ljud.mp3"
-    audio.play();
+  
         
+    }
+    if (input.value != ""){
+        const audio = new Audio();
+        audio.src = "./Ljud.mp3"
+        audio.play();
     }
 });
