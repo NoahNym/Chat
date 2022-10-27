@@ -19,19 +19,22 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app)
 
 const chatRef = ref(db, '/chat')
+const userRef = ref(db, '/user')
+
+var User = document.querySelector("#user")
 
 onChildAdded(chatRef, function (data){
     console.log(data.val())
     
         const message = document.createElement("li")
             message.innerText = 
-         data.val();
+         User.value +":  "+ data.val();
 
         list.appendChild(message)
 })
 
 
-const input = document.querySelector("input")
+const input = document.querySelector("#text")
 const list = document.querySelector("ul")
 
 input.addEventListener("keypress", function(event){
@@ -39,7 +42,7 @@ input.addEventListener("keypress", function(event){
 
         const messageId = new Date().toUTCString();
 
-       set(ref(db, "chat/" + messageId),input.value);
+       set(ref(db, "chat/"  + messageId),input.value);
        
        if (input.value != ""){
         

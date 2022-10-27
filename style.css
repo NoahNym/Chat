@@ -44,7 +44,7 @@ ul {
 
 
 
-input {
+#text {
     border: none;
     padding: 12px;
     background: rgb(84, 47, 119);
@@ -53,11 +53,32 @@ input {
     width: 100%;
 }
 
-input:focus {
+#user{
+    background: rgb(84, 47, 119);
+    border: none;
+    border-radius: 10px;
+    width: 8%;
+    padding: 0 10px;
+    height: 50px;
+    position: absolute;
+    top: 20px;
+    left: 16px;
+    display: flex;
+    
+    
+    
+}
+
+#text:focus {
     outline: none;
 }
 
-input::placeholder {
+#text::placeholder {
+    color: rgb(138, 118, 175);
+    font-weight: bold;
+}
+
+#user::placeholder {
     color: rgb(138, 118, 175);
     font-weight: bold;
 }
